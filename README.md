@@ -1,5 +1,6 @@
 # CORE DEV
-Useful functions to debug server behavior.
+(PHP Composer Source Repository)
+Useful functions to debug server behavior, and provide a formated and structurated response.
 
 ## VDD
 F4lk0n VarDump functions to help visualize variable contents.
