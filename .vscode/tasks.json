@@ -25,7 +25,15 @@
             "label": "DComp-UpBuild",
             "type": "shell",
             "command": "docker compose up -d --build",
-            "problemMatcher": []
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
         },
         {
             "label": "DComp-Down",
@@ -48,19 +56,19 @@
         {
             "label": "Comp-PHP-Install",
             "type": "shell",
-            "command": "docker compose exec api composer install",
+            "command": "docker compose exec php composer install",
             "problemMatcher": []
         },
         {
             "label": "Comp-PHP-Update",
             "type": "shell",
-            "command": "docker compose exec api composer update",
+            "command": "docker compose exec php composer update",
             "problemMatcher": []
         },
         {
             "label": "Comp-PHP-DAO",
             "type": "shell",
-            "command": "docker compose exec api composer dao",
+            "command": "docker compose exec php composer dao",
             "problemMatcher": []
         },
         //######################################################################
@@ -69,19 +77,19 @@
         {
             "label": "TDD-PHP-Test",
             "type": "shell",
-            "command": "docker compose exec api composer test",
+            "command": "docker compose exec php composer test",
             "problemMatcher": []
         },
         {
             "label": "TDD-PHP-Dox",
             "type": "shell",
-            "command": "docker compose exec api composer dox",
+            "command": "docker compose exec php composer dox",
             "problemMatcher": []
         },
         {
             "label": "TDD-PHP-Cover",
             "type": "shell",
-            "command": "docker compose exec api composer cover",
+            "command": "docker compose exec php composer cover",
             "problemMatcher": []
         },
     ]
