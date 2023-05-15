@@ -1,7 +1,6 @@
 <?php
-//namespace F4lk0n\CoreDev;
-use ReflectionClass;
-use Exception;
+//use ReflectionClass;
+//use Exception;
 
 /**
  * ##########################################################################################
@@ -73,7 +72,7 @@ use Exception;
  *     - Hide Path:
  *         - Set the value to false (boolean);
  */
-$GLOBALS['variable_debugger___caller_path_display_format'] = 1+strlen(dirname(dirname(dirname(__FILE__))));
+$GLOBALS['variable_debugger___caller_path_display_format'] = strlen(dirname(dirname(dirname(__FILE__))));
 //$GLOBALS['variable_debugger___caller_path_display_format'] = 0;
 //$GLOBALS['variable_debugger___caller_path_display_format'] = false;
 
@@ -94,22 +93,7 @@ $GLOBALS['variable_debugger___nesting_max'] = 10;
 
 
 
-/**
- * ##########################################################################################
- * ### Variable Debugger and Die ###
- * ##########################################################################################
- *
- * Debugs an variable's content and stop the scripts execution at the end.
- *
- * @param mixed $mixed
- *      Any variable you want to debug.
- */
-function VDD($mixed)
-{
-    $GLOBALS['variable_debugger___caller_distance'] = 1;
-    VD($mixed);
-    die;
-}
+
 
 
 
@@ -124,9 +108,8 @@ function VDD($mixed)
  *      Any variable you want to debug.
  *
  * @return null;
- *
  */
-function VD($mixed)
+function VD(mixed $mixed): void
 {
     //HTTP Header
     //@header("Content-Type: text/html; charset=utf-8");
@@ -135,8 +118,10 @@ function VD($mixed)
     //Nesting
     if(!isset($GLOBALS['variable_debugger___nesting_current']))
         $GLOBALS['variable_debugger___nesting_current'] = 0;
-    if($GLOBALS['variable_debugger___nesting_current']>$GLOBALS['variable_debugger___nesting_max'])
-        return print"<div class='variable-debug' style='padding:10px;border:1px solid rgba(255,0,0,0.2);color:#A00;'><b>!!! NESTED CALLS LIMIT !!!</b></div>";
+    if($GLOBALS['variable_debugger___nesting_current']>$GLOBALS['variable_debugger___nesting_max']){
+        print"<div class='variable-debug' style='padding:10px;border:1px solid rgba(255,0,0,0.2);color:#A00;'><b>!!! NESTED CALLS LIMIT !!!</b></div>";
+        return;
+    }
     $GLOBALS['variable_debugger___nesting_current']++;
 
 
@@ -446,4 +431,23 @@ function VD($mixed)
     if($GLOBALS['variable_debugger___nesting_current']===0)
         unset($GLOBALS['variable_debugger___nesting_current']);
 
+}
+
+
+
+/**
+ * ##########################################################################################
+ * ### Variable Debugger and Die ###
+ * ##########################################################################################
+ *
+ * Debugs an variable's content and stop the scripts execution at the end.
+ *
+ * @param mixed $mixed
+ *      Any variable you want to debug.
+ */
+function VDD($mixed)
+{
+    $GLOBALS['variable_debugger___caller_distance'] = 1;
+    VD($mixed);
+    die;
 }

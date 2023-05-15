@@ -3,10 +3,17 @@ use PHPUnit\Framework\TestCase;
 
 final class VDDTest extends TestCase
 {
-    public function testInteger(): void
+    public function testCallerFile(): void
     {
-        $this->expectOutputRegex(string $regularExpression);
-        
-        VD(1);
+        $this->expectOutputRegex('/(VDD)/');
+        VD('XXX');
     }
+    
+    
+    //public function testInteger(): void
+    //{
+    //    //$this->expectOutputRegex(string $regularExpression);
+    //    //
+    //    //VD(1);
+    //}
 }
