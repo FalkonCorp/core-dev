@@ -1,7 +1,7 @@
 # VDD
-Debugger functions to help visualize variable contents.
-Useful when, for some reason you don't have XDebug installed on the server and
-need to perform a quick analisys of the variables contents.
+Debugger functions to help visualize variable contents.  
+Useful when, for some reason you don't have XDebug installed on the server and  
+  need to perform a quick analisys of the variables contents.
 
 
 # Content
@@ -18,7 +18,9 @@ To Do:
 
 
 # Install
-TODO: Documentation, composer and source
+Just require the VDD.php, and thats it.  
+
+If using composer it already do it.  
 
 
 # Usage
