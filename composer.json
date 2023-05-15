@@ -1,6 +1,6 @@
 {
     "name": "f4lk0n/core-dev",
-    "description": "Debug helper",
+    "description": "F4lk0n Var Dump",
     "type": "library",
     "keywords": [
         "debug",
@@ -10,7 +10,10 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "F4lk0n"
+            "name": "F4lk0n",
+            "email": "otaviosoria@gmail.com",
+            "homepage": "https://github.com/F4LK0N",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "stable",
