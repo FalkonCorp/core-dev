@@ -1,5 +1,5 @@
 {
-    "name": "f4lk0n/lib-dev-vdd",
+    "name": "falkon-corp/lib-dev-vdd",
     "description": "Debug helper",
     "type": "library",
     "license": "MIT",
@@ -10,7 +10,7 @@
     },
     "authors": [
         {
-            "name": "4lk0n"
+            "name": "F4lk0n"
         }
     ],
     "minimum-stability": "stable",
