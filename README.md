@@ -8,7 +8,7 @@ Overview of the project here.
 	docker compose build --progress=plain  
 ### Run
 	docker compose up -d
-### Build and Run
+### Build and Run 
 	docker compose up -d --build
 ### Access
 	docker exec -it container-a /bin/bash
