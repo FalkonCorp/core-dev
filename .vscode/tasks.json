@@ -1,0 +1,88 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "DockerTools",
+            "type": "shell",
+            "command": "/home/falkon/PROJECTS/News/API/.docker/docker-tools"
+        },
+        //######################################################################
+        //### DOCKER COMPOSE ###
+        //######################################################################
+        {
+            "label": "DComp-Up",
+            "type": "shell",
+            "command": "docker compose up -d",
+            "problemMatcher": []
+        },
+        {
+            "label": "DComp-Build",
+            "type": "shell",
+            "command": "docker compose build",
+            "problemMatcher": []
+        },
+        {
+            "label": "DComp-UpBuild",
+            "type": "shell",
+            "command": "docker compose up -d --build",
+            "problemMatcher": []
+        },
+        {
+            "label": "DComp-Down",
+            "type": "shell",
+            "command": "docker compose down",
+            "problemMatcher": []
+        },
+        //######################################################################
+        //### CONTAINER ###
+        //######################################################################
+        {
+            "label": "Cont-PHP",
+            "type": "shell",
+            "command": "docker compose exec -it php /bin/sh",
+            "problemMatcher": []
+        },
+        //######################################################################
+        //### COMPOSER ###
+        //######################################################################
+        {
+            "label": "Comp-PHP-Install",
+            "type": "shell",
+            "command": "docker compose exec api composer install",
+            "problemMatcher": []
+        },
+        {
+            "label": "Comp-PHP-Update",
+            "type": "shell",
+            "command": "docker compose exec api composer update",
+            "problemMatcher": []
+        },
+        {
+            "label": "Comp-PHP-DAO",
+            "type": "shell",
+            "command": "docker compose exec api composer dao",
+            "problemMatcher": []
+        },
+        //######################################################################
+        //### PHP UNIT ###
+        //######################################################################
+        {
+            "label": "TDD-PHP-Test",
+            "type": "shell",
+            "command": "docker compose exec api composer test",
+            "problemMatcher": []
+        },
+        {
+            "label": "TDD-PHP-Dox",
+            "type": "shell",
+            "command": "docker compose exec api composer dox",
+            "problemMatcher": []
+        },
+        {
+            "label": "TDD-PHP-Cover",
+            "type": "shell",
+            "command": "docker compose exec api composer cover",
+            "problemMatcher": []
+        },
+    ]
+}
