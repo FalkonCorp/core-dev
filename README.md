@@ -1,23 +1,31 @@
-# Project
-Overview of the project here.
+# VDD
+Debugger functions to help visualize variable contents.
+Useful when, for some reason you don't have XDebug installed on the server and
+need to perform a quick analisys of the variables contents.
 
-.
-# Docker
-### Build
-	docker compose build  
-	docker compose build --progress=plain  
-### Run
-	docker compose up -d
-### Build and Run 
-	docker compose up -d --build
-### Access
-	docker exec -it container-a /bin/bash
-	docker exec -it container-b /bin/bash
 
-.
-# Development
-### Run
-	docker compose up -d	
-### Access
-	docker exec -it container-a /bin/bash
-	docker exec -it container-b /bin/bash
+# Content
+Features:
+- Indicate variables types;
+- Indicate file and line of the caller; (When available at the server);
+- HTML formated output;
+- Stylized output;
+- Short name for easy typing while developing;
+
+To Do:
+- Avoid circular reference;
+- Customize output style;
+
+
+# Install
+TODO: Documentation, composer and source
+
+
+# Usage
+```php
+VD($someVarA);  //VarDump contents
+VD($someVarB);  //VarDump contents
+VD($someVarC);  //VarDump contents
+VDD($someVarD); //VarDump contents and die;
+someFunction(); //Not called
+```

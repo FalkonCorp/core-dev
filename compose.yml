@@ -10,8 +10,12 @@ services:
         - ARG_TIMEZONE=${PROJECT_TIMEZONE}
         - ARG_OS_APK_MIRROR=${ALPINE_APK_MIRROR}
     volumes:
-      # Applications
+      # Logs
+      - ./logs/:/logs/
+      # Application
       - ./src/:/src/
     ports:
       - "80:80"
       - "443:443"
+      - "8080:80"
+      - "8443:443"
