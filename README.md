@@ -30,4 +30,5 @@ VD($someVarB);  //VarDump contents;
 VD($someVarC);  //VarDump contents;
 VDD($someVarD); //VarDump contents and die;
 someFunction(); //Not called;
+
 ```
