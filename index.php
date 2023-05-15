@@ -1,14 +1,16 @@
 <?php
+//namespace F4lk0n\CoreDev;
 
 require "vendor/autoload.php";
 
 echo 
-"VDD
+"VDD<br>\n
+<br>\n
+Debug helper function<br>\n";
 
-Debug helper function
-\n";
-
-
+var_dump(1);
+VD(2);
+VDD(3);
 
 
 

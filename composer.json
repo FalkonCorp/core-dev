@@ -27,8 +27,20 @@
     "autoload": {
         "psr-4": {
             "F4lk0n\\CoreDev\\": "src/"
-        }
+        },
+        "files": [
+            "src/VDD.php"
+        ]
     },
     
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    
+    "scripts": {
+        "da": "composer dumpautoload",
+        "dao": "composer dumpautoload --classmap-authoritative --optimize",
+
+        "test":  "/src/vendor/bin/phpunit --no-coverage",
+        "dox":   "/src/vendor/bin/phpunit --no-coverage --testdox",
+        "cover": "/src/vendor/bin/phpunit"
+    }
 }
