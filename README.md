@@ -23,9 +23,9 @@ TODO: Documentation, composer and source
 
 # Usage
 ```php
-VD($someVarA);  //VarDump contents
-VD($someVarB);  //VarDump contents
-VD($someVarC);  //VarDump contents
+VD($someVarA);  //VarDump contents;
+VD($someVarB);  //VarDump contents;
+VD($someVarC);  //VarDump contents;
 VDD($someVarD); //VarDump contents and die;
-someFunction(); //Not called
+someFunction(); //Not called;
 ```
